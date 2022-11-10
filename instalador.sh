@@ -174,7 +174,7 @@ dependencias() {
 }
 
 post_reboot() {
-  echo 'wget -O /root/instalador.sh "https://raw.githubusercontent.com/emirjorge/premium/master/instalador.sh"; clear; sleep 2; chmod +x /root/instalador.sh; /root/instalador.sh --continue' >>/root/.bashrc
+  echo 'wget -O /root/instalador.sh "https://raw.githubusercontent.com/emirjorge/Premium-V2/master/instalador.sh"; clear; sleep 2; chmod +x /root/instalador.sh; /root/instalador.sh --continue' >>/root/.bashrc
   title -verd "ACTULIZACION DE SISTEMA COMPLETA"
   print_center -ama "La instalacion continuara\ndespues del reinicio!!!"
   msg -bar
@@ -262,7 +262,7 @@ install_mod() {
   clear && clear
   mkdir /etc/VPS-MX >/dev/null 2>&1
   cd /etc
-  wget https://raw.githubusercontent.com/emirjorge/premium/master/premium.tar.xz >/dev/null 2>&1
+  wget https://raw.githubusercontent.com/emirjorge/Premium-V2/master/premium.tar.xz >/dev/null 2>&1
   tar -xf premium.tar.xz >/dev/null 2>&1
   chmod +x premium.tar.xz >/dev/null 2>&1
   rm -rf premium.tar.xz
