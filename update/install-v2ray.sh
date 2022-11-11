@@ -19,7 +19,7 @@ REMOVE=0
 CHINESE=0
 
 #BASE_SOURCE_PATH="https://multi.netlify.app"
-BASE_SOURCE_PATH="https://raw.githubusercontent.com/emirjorge/Premium-V2/multi-v2ray-x/master"
+BASE_SOURCE_PATH="https://raw.githubusercontent.com/emirjorge/multi-v2ray-x/master"
 UTIL_PATH="/etc/v2ray_util/util.cfg"
 
 UTIL_CFG="$BASE_SOURCE_PATH/v2ray_util/util_core/util.cfg"
