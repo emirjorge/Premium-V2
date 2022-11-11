@@ -2,16 +2,16 @@
 # Author: Jrohy
 # github: https://github.com/Jrohy/multi-v2ray
 
-# 定时任务北京执行时间(0~23)
+#定时任务北京执行时间(0~23)
 BEIJING_UPDATE_TIME=3
 
-# 记录最开始运行脚本的路径
+#记录最开始运行脚本的路径
 BEGIN_PATH=$(pwd)
 
-# 安装方式, 0为全新安装, 1为保留v2ray配置更新
+#安装方式, 0为全新安装, 1为保留v2ray配置更新
 INSTALL_WAY=0
 
-# 定义操作变量, 0为否, 1为是
+#定义操作变量, 0为否, 1为是
 HELP=0
 
 REMOVE=0
