@@ -336,6 +336,11 @@ salir() {
   exit
 }
 
+error_opcion() {
+  echo $opcao "\033[1;97mNo es una opcion valida :\e[32m "
+  sleep 2
+}
+
 #MENUS
 /bin/cp /etc/skel/.bashrc ~/
 /bin/cp /etc/skel/.bashrc /etc/bash.bashrc
@@ -353,6 +358,10 @@ case $opcao in
 
 1)
   install_mod
+  ;;
+  
+ *)
+  error_opcion
   ;;
 esac
 exit
