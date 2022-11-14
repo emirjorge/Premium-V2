@@ -337,7 +337,7 @@ salir() {
 }
 
 error_opcion() {
-  echo $opcao "\033[1;97mNo es una opcion valida :\e[32m "
+  print_center -ama "Seleccione una opcion valida"
   sleep 2
 }
 
