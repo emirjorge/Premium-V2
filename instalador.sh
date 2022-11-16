@@ -364,8 +364,8 @@ case $opcao in
   
  *)
   error_opcion
-  menu
   clear && clear
+  menu
   ;;
 esac
 }
