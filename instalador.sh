@@ -339,6 +339,7 @@ salir() {
 error_opcion() {
   print_center -ama "Seleccione una opcion valida"
   sleep 2
+  case opcao
 }
 
 #MENUS
@@ -346,7 +347,7 @@ error_opcion() {
 /bin/cp /etc/skel/.bashrc /etc/bash.bashrc
 
 echo -ne " \e[1;93m [\e[1;32m0\e[1;93m]\033[1;31m > \033[1;97m Salir \e[97m \n"
-echo -ne " \e[1;93m [\e[1;32m1\e[1;93m]\033[1;31m > \033[1;97m INSTALAR 8.6x VPS \e[97m \n"
+echo -ne " \e[1;93m [\e[1;32m1\e[1;93m]\033[1;31m > \033[1;97m INSTALAR 8.9x VPS Premium\e[97m \n"
 
 echo -ne "\033[1;97mDigite solo el numero segun su respuesta:\e[32m "
 read opcao
