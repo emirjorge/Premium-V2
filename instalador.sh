@@ -339,7 +339,7 @@ salir() {
 error_opcion() {
   print_center -ama "Seleccione una opcion valida"
   sleep 2
-  case opcao
+  read opcao
 }
 
 #MENUS
