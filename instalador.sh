@@ -241,7 +241,7 @@ while :; do
 done
 
 clear && clear
-menu
+
 menu() {
 msg -bar2
 echo -e " \e[5m\033[1;100m   =====>> ►► 🐲 MULTI - SCRIPT  🐲 ◄◄ <<=====   \033[1;37m"
@@ -341,7 +341,6 @@ salir() {
 error_opcion() {
   print_center -ama "Seleccione una opcion valida"
   sleep 2
-  menu
 }
 
 #MENUS
@@ -365,7 +364,9 @@ case $opcao in
   
  *)
   error_opcion
+  menu
   ;;
 esac
 }
+menu
 exit
