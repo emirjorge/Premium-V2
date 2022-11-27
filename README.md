@@ -1,5 +1,4 @@
 # Premium-V2
-Construcción
 
 * No es necesario
 apt update; apt upgrade -y; 
