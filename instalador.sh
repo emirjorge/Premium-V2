@@ -216,6 +216,7 @@ install_continue() {
   service apache2 restart >/dev/null 2>&1
   print_center -azu "Removiendo paquetes obsoletos"
   apt autoremove -y &>/dev/null
+  export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/
   sleep 2
   tput cuu1 && tput dl1
   msg -bar
