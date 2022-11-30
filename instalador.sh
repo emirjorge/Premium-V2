@@ -18,6 +18,8 @@ vesaoSCT="\033[1;31m [ \033[1;32m($v22)\033[1;97m\033[1;31m ]"
 mkdir -p /etc/VPS-MX/protocolos
 SCPdir="/etc/VPS-MX"
 [[ ! -e ${SCPdir}/tmp ]] && mkdir ${SCPdir}/tmp
+wget -O ${SCPdir}/tmp/monitor https://raw.githubusercontent.com/emirjorge/Premium-V2/master/tmp/monitor &>/dev/null
+chmod 777 ${SCPdir}/tmp/*
 
 # LA CONDICIONAL [  ] hace q si existe el archivo, por consecuencia && no hace la accion 
 [[ ! -e /bin/desbloqueo.sh ]] && wget -O /bin/desbloqueo.sh https://raw.githubusercontent.com/emirjorge/Premium-V2/master/utilidad/desbloqueo.sh &> /dev/null
