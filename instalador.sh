@@ -20,9 +20,9 @@ SCPdir="/etc/VPS-MX"
 [[ ! -e ${SCPdir}/tmp ]] && mkdir ${SCPdir}/tmp
 
 # LA CONDICIONAL [  ] hace q si existe el archivo, por consecuencia && no hace la accion 
-[[ ! -e /bin/desbloqueo.sh ]] && wget -O /bin/desbloqueo.sh https://raw.githubusercontent.com/emirjorge/premium/master/librerias/desbloqueo.sh &> /dev/null
+[[ ! -e /bin/desbloqueo.sh ]] && wget -O /bin/desbloqueo.sh https://raw.githubusercontent.com/emirjorge/Premium-V2/master/utilidad/desbloqueo.sh &> /dev/null
 chmod +x /bin/desbloqueo.sh
-[[ ! -e /bin/monitor.sh ]] && wget -O /bin/monitor.sh https://raw.githubusercontent.com/emirjorge/premium/master/librerias/monitor.sh &> /dev/null
+[[ ! -e /bin/monitor.sh ]] && wget -O /bin/monitor.sh https://raw.githubusercontent.com/emirjorge/Premium-V2/master/utilidad/monitor.sh &> /dev/null
 chmod +x /bin/monitor.sh
 #[[ ! -e /etc/VPS-MX/protocolos/wireguard.sh ]] && wget -O /etc/VPS-MX/protocolos/wireguard.sh https://raw.githubusercontent.com/emirjorge/premium/master/update/wireguard.sh &> /dev/null
 #chmod +x /etc/VPS-MX/protocolos/wireguard.sh
@@ -30,8 +30,8 @@ chmod +x /bin/monitor.sh
 #chmod +x /etc/VPS-MX/protocolos/checkuser.sh
 #[[ ! -e /etc/VPS-MX/protocolos/checkuser.py ]] && wget -O /etc/VPS-MX/protocolos/checkuser.py https://raw.githubusercontent.com/emirjorge/premium/master/update/chekuser.py &> /dev/null
 #chmod +x /etc/VPS-MX/protocolos/checkuser.py
-[[ ! -e /var/www/html/estilos.css ]] && wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/emirjorge/premium/master/librerias/estilos.css &> /dev/null
-[[ ! -e ${SCPdir}/tmp/style ]] && wget -O ${SCPdir}/tmp/style https://raw.githubusercontent.com/emirjorge/premium/master/update/style &> /dev/null
+[[ ! -e /var/www/html/estilos.css ]] && wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/emirjorge/Premium-V2/master/utilidad/estilos.css &> /dev/null
+[[ ! -e ${SCPdir}/tmp/style ]] && wget -O ${SCPdir}/tmp/style https://raw.githubusercontent.com/emirjorge/Premium-V2/master/utilidad/style &> /dev/null
 
 
 ### COLORES Y BARRA
