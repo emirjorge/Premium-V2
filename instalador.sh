@@ -176,7 +176,7 @@ dependencias() {
 
 post_reboot() {
   echo 'wget -O /root/instalador.sh "https://raw.githubusercontent.com/emirjorge/Premium-V2/master/instalador.sh"; clear; sleep 2; chmod +x /root/instalador.sh; /root/instalador.sh --continue' >>/root/.bashrc
-  title -verd "ACTULIZACION DE SISTEMA COMPLETA"
+  title -verd "ACTUALIZACION DE SISTEMA COMPLETA"
   print_center -ama "La instalacion continuara\ndespues del reinicio!!!"
   msg -bar
 }
@@ -184,7 +184,7 @@ post_reboot() {
 install_start() {
   msg -bar
 
-  echo -e "\e[1;97m           \e[5m\033[1;100m   ACTULIZACION DE SISTEMA   \033[1;37m"
+  echo -e "\e[1;97m           \e[5m\033[1;100m   ACTUALIZACION DE SISTEMA   \033[1;37m"
   msg -bar
   print_center -ama "Se actualizaran los paquetes del sistema.\n Puede demorar y pedir algunas confirmaciones.\n"
   msg -bar3
@@ -193,7 +193,7 @@ install_start() {
   [[ "$opcion" != @(s|S) ]] && stop_install
   clear && clear
   msg -bar
-  echo -e "\e[1;97m           \e[5m\033[1;100m   ACTULIZACION DE SISTEMA   \033[1;37m"
+  echo -e "\e[1;97m           \e[5m\033[1;100m   ACTUALIZACION DE SISTEMA   \033[1;37m"
   msg -bar
   os_system
   repo "${vercion}"
