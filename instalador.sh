@@ -315,7 +315,7 @@ install_mod() {
   echo 'echo -e "\t\033[91m        | _ \ _ \ __|  \/  |_ _| | | |  \/  | " ' >>.bashrc
   echo 'echo -e "\t\033[91m        |  _/   / _|| |\/| || || |_| | |\/| | " ' >>.bashrc
   echo 'echo -e "\t\033[91m        |_| |_|_\___|_|  |_|___|\___/|_|  |_| " ' >>.bashrc
-  # echo 'echo -e "\t\033[91m    \_/  |_|   |____/      |_|  |_/_/\_\ " ' >>.bashrc
+
   echo 'wget -O /etc/versin_script_new https://raw.githubusercontent.com/emirjorge/Premium-V2/master/version &>/dev/null' >>.bashrc
   echo 'echo "" ' >>.bashrc
   echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
@@ -323,7 +323,7 @@ install_mod() {
   echo 'echo -e "\t\033[92mRESELLER : $mess1 "' >>.bashrc
   echo 'echo -e "\t\e[1;33mVERSION: \e[1;31m$(cat /etc/versin_script_new)"' >>.bashrc
   echo 'echo "" ' >>.bashrc
-  echo 'echo -e "\t\033[97mPARA MOSTAR PANEL BASH ESCRIBA: menu "' >>.bashrc
+  echo 'echo -e "\t\033[97mPARA MOSTRAR PANEL BASH ESCRIBA: menu "' >>.bashrc
   echo 'echo ""' >>.bashrc
   rm -rf /usr/bin/pytransform &>/dev/null
   rm -rf VPS-MX.sh
@@ -350,7 +350,7 @@ error_opcion() {
 /bin/cp /etc/skel/.bashrc /etc/bash.bashrc
 
 echo -ne " \e[1;93m [\e[1;32m0\e[1;93m]\033[1;31m > \033[1;97m Salir \e[97m \n"
-echo -ne " \e[1;93m [\e[1;32m1\e[1;93m]\033[1;31m > \033[1;97m INSTALAR 8.9x VPS Premium\e[97m \n"
+echo -ne " \e[1;93m [\e[1;32m1\e[1;93m]\033[1;31m > \033[1;97m INSTALAR 8.9x Script Premium\e[97m \n"
 
 echo -ne "\033[1;97mDigite solo el numero segun su respuesta:\e[32m "
 read opcao
