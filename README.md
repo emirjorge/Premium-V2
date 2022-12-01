@@ -1,6 +1,8 @@
 # Premium-V2
 
-No es necesario apt update; apt upgrade -y; 
+No es necesario:
+
+apt update; apt upgrade -y; 
 
 * Link Directo para la instalación:
 
