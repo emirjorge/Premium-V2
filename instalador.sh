@@ -215,7 +215,6 @@ install_continue() {
   service apache2 restart >/dev/null 2>&1
   print_center -azu "Removiendo paquetes obsoletos"
   apt autoremove -y &>/dev/null
-  echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/' >>.bashrc
   sleep 2
   tput cuu1 && tput dl1
   msg -bar
@@ -309,6 +308,7 @@ install_mod() {
   echo "sudo resetsshdrop" >>/etc/rc.local
   echo "sleep 2s" >>/etc/rc.local
   echo "exit 0" >>/etc/rc.local
+  echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/' >>.bashrc
   echo 'clear' >>.bashrc
   echo 'echo ""' >>.bashrc
   echo 'echo -e "\t\033[97m ___ ___ ___ __  __ ___ _   _ __  __  " ' >>.bashrc
