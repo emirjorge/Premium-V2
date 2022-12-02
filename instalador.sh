@@ -311,19 +311,19 @@ install_mod() {
   echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/' >>.bashrc
   echo 'clear' >>.bashrc
   echo 'echo ""' >>.bashrc
-  echo 'echo -e "\t\033[97m ___ ___ ___ __  __ ___ _   _ __  __  " ' >>.bashrc
-  echo 'echo -e "\t\033[97m| _ \ _ \ __|  \/  |_ _| | | |  \/  | " ' >>.bashrc
-  echo 'echo -e "\t\033[34m|  _/   / _|| |\/| || || |_| | |\/| | " ' >>.bashrc
-  echo 'echo -e "\t\033[91m|_| |_|_\___|_|  |_|___|\___/|_|  |_| " ' >>.bashrc
-
+  #echo 'echo -e "\t\033[97m ___ ___ ___ __  __ ___ _   _ __  __  " ' >>.bashrc
+  #echo 'echo -e "\t\033[97m| _ \ _ \ __|  \/  |_ _| | | |  \/  | " ' >>.bashrc
+  #echo 'echo -e "\t\033[34m|  _/   / _|| |\/| || || |_| | |\/| | " ' >>.bashrc
+  #echo 'echo -e "\t\033[91m|_| |_|_\___|_|  |_|___|\___/|_|  |_| " ' >>.bashrc
+  echo 'figlet "     PREMIUM" | lolcat' >>.bashrc
   echo 'wget -O /etc/versin_script_new https://raw.githubusercontent.com/emirjorge/Premium-V2/master/version &>/dev/null' >>.bashrc
   echo 'echo "" ' >>.bashrc
   echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
   echo 'echo "" ' >>.bashrc
-  echo 'echo -e "\t\033[92mRESELLER : $mess1 "' >>.bashrc
+  echo 'echo -e "\t\033[92mRESELLER :" $mess1 | lolcat' >>.bashrc
   echo 'echo -e "\t\e[1;33mVERSION: \e[1;31m$(cat /etc/versin_script_new)"' >>.bashrc
   echo 'echo "" ' >>.bashrc
-  echo 'echo -e "\t\033[97mPARA MOSTRAR PANEL BASH ESCRIBA: menu "' >>.bashrc
+  echo 'echo -e "\t\033[97mPARA MOSTRAR PANEL BASH ESCRIBA: menu" | lolcat' >>.bashrc
   echo 'echo ""' >>.bashrc
   rm -rf /usr/bin/pytransform &>/dev/null
   rm -rf VPS-MX.sh
