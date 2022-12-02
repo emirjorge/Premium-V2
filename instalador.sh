@@ -33,7 +33,12 @@ chmod +x /bin/monitor.sh
 #[[ ! -e /etc/VPS-MX/protocolos/checkuser.py ]] && wget -O /etc/VPS-MX/protocolos/checkuser.py https://raw.githubusercontent.com/emirjorge/premium/master/update/chekuser.py &> /dev/null
 #chmod +x /etc/VPS-MX/protocolos/checkuser.py
 [[ ! -e ${SCPdir}/tmp/style ]] && wget -O ${SCPdir}/tmp/style https://raw.githubusercontent.com/emirjorge/Premium-V2/master/utilidad/style &> /dev/null
-
+[[ ! -e /etc/autostart ]] && {
+echo '#!/bin/bash
+clear
+#INICIO AUTOMATICO' >/etc/autostart
+chmod +x /etc/autostart
+}
 
 ### COLORES Y BARRA
 msg() {
