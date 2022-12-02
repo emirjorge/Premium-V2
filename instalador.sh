@@ -320,7 +320,7 @@ install_mod() {
   #echo 'echo -e "\t\033[97m| _ \ _ \ __|  \/  |_ _| | | |  \/  | " ' >>.bashrc
   #echo 'echo -e "\t\033[34m|  _/   / _|| |\/| || || |_| | |\/| | " ' >>.bashrc
   #echo 'echo -e "\t\033[91m|_| |_|_\___|_|  |_|___|\___/|_|  |_| " ' >>.bashrc
-  echo 'figlet "     PREMIUM" | lolcat' >>.bashrc
+  echo 'figlet "      PREMIUM" | lolcat' >>.bashrc
   echo 'cowsay "BIENVENIDO" | lolcat' >>.bashrc
   echo 'wget -O /etc/versin_script_new https://raw.githubusercontent.com/emirjorge/Premium-V2/master/version &>/dev/null' >>.bashrc
   echo 'echo "" ' >>.bashrc
