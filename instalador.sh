@@ -151,7 +151,7 @@ dependencias() {
   version=$(lsb_release -r | awk '{print $2}')
   #SI ES MAYOR O IGUAL A 23.04 SOLO INSTALARA PYTHON 3
   if [[ "$(echo -e "23.04\n$version" | sort -V | head -n1)" == "23.04" ]]; then
-    soft="sudo bsdmainutils zip unzip ufw curl python3 python3-pip openssl screen cron iptables lsof pv boxes nano at mlocate gawk grep bc jq curl npm nodejs socat netcat-traditional net-tools cowsay figlet lolcat apache2 cmatrix"
+    soft="sudo bsdmainutils zip unzip ufw curl python3 python3-pip pipx openssl screen cron iptables lsof pv boxes nano at mlocate gawk grep bc jq curl npm nodejs socat netcat-traditional net-tools cowsay figlet lolcat apache2 cmatrix"
   #SI ES MAYOR O IGUAL A 21.04 INSTALARA PYTHON2 Y PYTHON3
   elif [[ "$(echo -e "21.04\n$version" | sort -V | head -n1)" == "21.04" ]]; then
     soft="sudo bsdmainutils zip unzip ufw curl python2 python3 python3-pip openssl screen cron iptables lsof pv boxes nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat apache2 cmatrix"
