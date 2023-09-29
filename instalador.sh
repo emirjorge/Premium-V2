@@ -155,6 +155,7 @@ dependencias() {
   #SI ES MAYOR O IGUAL A 21.04 INSTALARA PYTHON2 Y PYTHON3
   elif [[ "$(echo -e "21.04\n$version" | sort -V | head -n1)" == "21.04" ]]; then
     soft="sudo bsdmainutils zip unzip ufw curl python2 python3 python3-pip openssl screen cron iptables lsof pv boxes nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat apache2 cmatrix"
+  #SI NO SE CUMPLEN LAS CONDICIONES ANTERIORES INSTALARA PYTHON
   else
     soft="sudo bsdmainutils zip unzip ufw curl python python3 python3-pip openssl screen cron iptables lsof pv boxes nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat apache2 cmatrix"
   fi
