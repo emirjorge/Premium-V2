@@ -222,7 +222,6 @@ fix_python() {
   if [[ "$(echo -e "23.04\n$version" | sort -V | head -n1)" == "23.04" ]]; then
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1 &>/dev/null
     sudo update-alternatives --set python /usr/bin/python3 &>/dev/null
-    sudo pipx ensurepath &>/dev/null
     
   #SI ES MAYOR O IGUAL A 20.04 INSTALARA PYTHON2 Y PYTHON3, Y PYTHON2 SERA PREDETERMINADO
   elif [[ "$(echo -e "20.04\n$version" | sort -V | head -n1)" == "20.04" ]]; then
@@ -249,6 +248,7 @@ install_continue() {
   apt autoremove -y &>/dev/null
   sleep 2
   tput cuu1 && tput dl1
+  sudo pipx ensurepath &>/dev/null
   msg -bar
   print_center -ama "Si algunas de las dependencias fallo!!!\nal terminar, puede intentar instalar\nla misma manualmente usando el siguiente comando\napt install nom_del_paquete"
   msg -bar
