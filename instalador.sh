@@ -222,8 +222,8 @@ fix_python() {
   if [[ "$(echo -e "23.04\n$version" | sort -V | head -n1)" == "23.04" ]]; then
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1 &>/dev/null
     sudo update-alternatives --set python /usr/bin/python3 &>/dev/null
-    #pipx ensurepath &>/dev/null
-    python3 -m pipx ensurepath
+    sudo pipx ensurepath &>/dev/null
+    
   #SI ES MAYOR O IGUAL A 20.04 INSTALARA PYTHON2 Y PYTHON3, Y PYTHON2 SERA PREDETERMINADO
   elif [[ "$(echo -e "20.04\n$version" | sort -V | head -n1)" == "20.04" ]]; then
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1 &>/dev/null
