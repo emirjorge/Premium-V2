@@ -339,7 +339,7 @@ install_mod() {
   echo "sudo resetsshdrop" >>/etc/rc.local
   echo "sleep 2s" >>/etc/rc.local
   echo "exit 0" >>/etc/rc.local
-  echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/' >>.bashrc
+  echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/:/root/.local/bin' >>.bashrc
   echo 'clear' >>.bashrc
   echo 'echo ""' >>.bashrc
   #echo 'echo -e "\t\033[97m ___ ___ ___ __  __ ___ _   _ __  __  " ' >>.bashrc
