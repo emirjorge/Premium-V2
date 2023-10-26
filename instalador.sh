@@ -192,7 +192,7 @@ dependencias() {
 post_reboot() {
   echo 'wget -O /root/instalador.sh "https://raw.githubusercontent.com/emirjorge/Premium-V2/master/instalador.sh"; clear; sleep 2; chmod +x /root/instalador.sh; /root/instalador.sh --continue' >>/root/.bashrc
   title -verd "ACTUALIZACION DE SISTEMA COMPLETA"
-  print_center -ama "La instalacion continuara\ndespues del reinicio!!!"
+  print_center -ama "La instalación continuará\ndespues del reinicio!!!"
   msg -bar
 }
 
