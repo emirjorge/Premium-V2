@@ -2,9 +2,9 @@
 
 # EMPIEZA EL CODIGO
 clear && clear
-apt install net-tools -y &>/dev/null
-myip=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1)
-myint=$(ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}')
+#apt install net-tools -y &>/dev/null
+#myip=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1)
+#myint=$(ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}')
 rm -rf /etc/localtime &>/dev/null
 ln -s /usr/share/zoneinfo/America/Lima /etc/localtime &>/dev/null
 rm -rf /usr/local/lib/systemubu1 &>/dev/null
