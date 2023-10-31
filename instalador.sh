@@ -147,6 +147,36 @@ repo() {
   esac
 }
 #REVISA LA VERSION DE UBUNTU PARA INSTALAR LAS DEPENDENCIAS
+configurar_rsyslog() {
+  # Definir el patrón a buscar
+  pattern="\$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat"
+
+  # Verificar si el patrón no existe en el archivo, entonces lo escribirá
+  if ! grep -q "$pattern" /etc/rsyslog.conf; then
+    # Encontrar la línea que contiene '#### GLOBAL DIRECTIVES ####'
+    line_number=$(grep -n '#### GLOBAL DIRECTIVES ####' /etc/rsyslog.conf | cut -d: -f1)
+
+    # Insertar el patrón después de la línea
+    sed -i "$((line_number+2)) i\\
+\\
+# Use traditional timestamp format.\\
+# To enable high precision timestamps, comment out the following line.\\
+#\\
+\$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat\\
+" /etc/rsyslog.conf
+  fi
+
+  #Añadir logs dropbear en un archivo por separado
+  codigo='if $programname == "dropbear" then {
+    action(type="omfile" file="/var/log/dropbear.log")
+    stop
+}'
+
+  if ! grep -qF "$codigo" /etc/rsyslog.conf; then
+    echo -e "\n$codigo" >> /etc/rsyslog.conf
+    sudo systemctl restart rsyslog
+  fi
+} 
 dependencias() {
   version=$(lsb_release -r | awk '{print $2}')
   #SI ES MAYOR O IGUAL A 23.04 SOLO INSTALARA PYTHON 3
@@ -239,6 +269,7 @@ install_continue() {
   print_center -ama "$distro $vercion"
   print_center -verd "INSTALANDO DEPENDENCIAS"
   msg -bar3
+  configurar_rsyslog
   dependencias
   msg -bar3
   sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf >/dev/null 2>&1
